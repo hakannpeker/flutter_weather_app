@@ -1,19 +1,3 @@
-/*
-{
-  "weather": [
-    {
-      "description": "clear sky",
-      "icon": "01d"
-    }
-  ],
-  "main": {
-    "temp": 282.55,
-  },
-  
-  "name": "Mountain View",
-}                     
- */
-
 class WeatherInfo {
   final String? description;
   final String? icon;
@@ -81,8 +65,6 @@ class WeatherResponse {
     final windInfoJson = json["wind"];
     final windInfo = WindInfo.fromJson(windInfoJson);
 
-    return WeatherResponse(cityName: cityName, tempInfo: tempInfo, weatherInfo: weatherInfo, windInfo: windInfo,country: country);
+    return WeatherResponse(cityName: cityName, tempInfo: tempInfo, weatherInfo: weatherInfo, windInfo: windInfo, country: country);
   }
-
-  
 }

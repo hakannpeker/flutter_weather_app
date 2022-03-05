@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app_dio/core/widgets/custom_text.dart';
 import 'package:kartal/kartal.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../core/widgets/custom_elevated_button.dart';
-import '../../core/widgets/custom_text_field.dart';
-import '../service/dio_service.dart';
+import '../../product/widgets/custom_elevated_button.dart';
+import '../../product/widgets/custom_text.dart';
+import '../../product/widgets/custom_text_field.dart';
 import '../model/weather_model.dart';
-
+import '../service/dio_service.dart';
 
 class WeatherView extends StatefulWidget {
   const WeatherView({Key? key}) : super(key: key);
