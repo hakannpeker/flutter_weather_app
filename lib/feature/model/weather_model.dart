@@ -65,6 +65,12 @@ class WeatherResponse {
     final windInfoJson = json["wind"];
     final windInfo = WindInfo.fromJson(windInfoJson);
 
-    return WeatherResponse(cityName: cityName, tempInfo: tempInfo, weatherInfo: weatherInfo, windInfo: windInfo, country: country);
+    return WeatherResponse(
+      cityName: cityName,
+      tempInfo: tempInfo,
+      weatherInfo: weatherInfo,
+      windInfo: windInfo,
+      country: country,
+    );
   }
 }

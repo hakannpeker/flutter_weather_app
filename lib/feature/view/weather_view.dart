@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
-import 'package:lottie/lottie.dart';
 
 import '../../product/widgets/custom_elevated_button.dart';
 import '../../product/widgets/custom_text.dart';
@@ -49,7 +48,6 @@ class _WeatherViewState extends State<WeatherView> {
               cityTextController: _cityTextController,
             ),
           ),
-          //ElevatedButton(onPressed: _search, child: Text('Search')),
           CustomElevatedButton(
             onPressed: _search,
           ),
@@ -70,7 +68,7 @@ class _WeatherViewState extends State<WeatherView> {
           _imageContainer(context),
           CustomText.maxTempText('Max Temperature: ${_response?.tempInfo?.tempMax}°C', context: context),
           CustomText.minTempText('Min Temperature: ${_response?.tempInfo?.tempMin}°C', context: context),
-          _lottieAndTextRow(context)
+          CustomText.windText('Wind Speed: ${_response?.windInfo?.speed.toString() ?? ""} km/h', context: context)
         ],
       ),
     );
@@ -82,14 +80,5 @@ class _WeatherViewState extends State<WeatherView> {
       color: context.appTheme.backgroundColor,
       child: Image.network(_response?.iconUrl ?? ""),
     ));
-  }
-
-  Row _lottieAndTextRow(BuildContext context) {
-    return Row(
-      children: [
-        Lottie.asset('assets/wind.json', width: 60, height: 60),
-        CustomText.windText('Wind: ${_response?.windInfo?.speed.toString() ?? ""} km/h', context: context)
-      ],
-    );
   }
 }

@@ -23,5 +23,5 @@ class CustomText extends Text {
       : super(data, style: context.textTheme.headline5?.copyWith(color: Colors.white));
 
   CustomText.windText(String data, {required BuildContext context}) 
-      : super(data, style: context.textTheme.headline4?.copyWith(color: Colors.white));
+      : super(data, style: context.textTheme.headline5?.copyWith(color: Colors.white));
 }
